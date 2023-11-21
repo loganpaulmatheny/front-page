@@ -7,9 +7,10 @@ import { useEffect } from "react";
 import Home from "../Home/Home";
 
 function App() {
-  const [articles, setArticles] = useState({});
+  console.log(mockData);
+  const [articles, setArticles] = useState([]);
 
-  function getArticlesCall(mockData) {
+  function getArticlesCall() {
     // getArticles().then((data) => {
     //   setArticles(data.articles);
     // });
