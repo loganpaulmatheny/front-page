@@ -1,6 +1,9 @@
+import "./Page.css";
 import React from "react";
+import Card from "../Card/Card";
 
 function Page({ articles }) {
+  console.log(articles);
   const articleCards = articles.map((article) => {
     return (
       <Card

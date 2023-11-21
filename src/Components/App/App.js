@@ -4,16 +4,18 @@ import { Routes, Route } from "react-router-dom";
 import { mockData } from "../../Data/mockData";
 import { useState } from "react";
 import { useEffect } from "react";
+import Home from "../Home/Home";
 
 function App() {
   const [articles, setArticles] = useState({});
 
-  function getArticlesCall() {
+  function getArticlesCall(mockData) {
     // getArticles().then((data) => {
     //   setArticles(data.articles);
     // });
 
-    setArticles(mockData);
+    setArticles(mockData.articles);
+    console.log("getting to the articles call", articles);
   }
 
   useEffect(() => {
