@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import { mockData } from "../../Data/mockData";
 import { useState } from "react";
 import { useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
+
 import Home from "../Home/Home";
 
 function App() {
@@ -15,7 +17,11 @@ function App() {
     //   setArticles(data.articles);
     // });
 
-    setArticles(mockData.articles);
+    const updatedMockData = mockData.articles.map((article) => {
+      article.id = uuidv4();
+      return article;
+    });
+    setArticles(updatedMockData);
     console.log("getting to the articles call", articles);
   }
 
