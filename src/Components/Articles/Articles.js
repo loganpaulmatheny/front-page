@@ -15,7 +15,14 @@ function Articles({ articles }) {
     );
   });
 
-  return <div className="articles-container">{articleCards}</div>;
+  return (
+    <div className="articles-page">
+      <h1 className="app-title">front page</h1>
+      <section className="articles-container">
+        {articleCards}
+      </section>
+    </div>
+  );
 }
 
 export default Articles;
