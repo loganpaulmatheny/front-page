@@ -1,10 +1,10 @@
 import React from "react";
-import Page from "../Page/Page";
+import Articles from "../Articles/Articles";
 
 function Home({ articles }) {
   return (
     <div className="home-container">
-      <Page articles={articles} />
+      <Articles articles={articles} />
     </div>
   );
 }
