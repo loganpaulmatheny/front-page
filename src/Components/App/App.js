@@ -4,7 +4,10 @@ import { Routes, Route } from "react-router-dom";
 import { mockData } from "../../Data/mockData";
 import { useState } from "react";
 import { useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
+
 import Home from "../Home/Home";
+import Viewer from "../Viewer/Viewer";
 
 function App() {
   console.log(mockData);
@@ -15,7 +18,11 @@ function App() {
     //   setArticles(data.articles);
     // });
 
-    setArticles(mockData.articles);
+    const updatedMockData = mockData.articles.map((article) => {
+      article.id = uuidv4();
+      return article;
+    });
+    setArticles(updatedMockData);
     console.log("getting to the articles call", articles);
   }
 
@@ -27,7 +34,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home articles={articles} />}></Route>
-        {/* <Route path="/view" element={<View article={article} />}></Route> */}
+        <Route
+          path="/article/:id"
+          element={<Viewer articles={articles} />}
+        ></Route>
       </Routes>
     </>
   );
