@@ -19,6 +19,7 @@
 .author-block {
   display: flex;
   flex-direction: column;
+  margin-left: 30px;
 }
 
 .image {
