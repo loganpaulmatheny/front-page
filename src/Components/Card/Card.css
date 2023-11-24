@@ -29,3 +29,19 @@
 .article-description {
   font-size: 1.2rem;
 }
+
+.square-image {
+  width:350px;
+  
+  margin: 5px;
+}
+
+.title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-published {
+  font-size: smaller;
+}

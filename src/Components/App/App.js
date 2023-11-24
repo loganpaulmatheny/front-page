@@ -11,7 +11,6 @@ import Home from "../Home/Home";
 import Viewer from "../Viewer/Viewer";
 
 function App() {
-  console.log(mockData);
   const [articles, setArticles] = useState([]);
 
   function removeTrailingChars(property) {
@@ -27,14 +26,12 @@ function App() {
       article.id = uuidv4();
       if (article.content) {
         article.content = removeTrailingChars(article.content);
-        console.log(article.content);
       }
 
       return article;
     });
 
     setArticles(updatedMockData);
-    console.log("getting to the articles call", articles);
   }
 
   useEffect(() => {

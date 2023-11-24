@@ -16,6 +16,15 @@
 
 .app-title {
   margin-top: 7rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
    text-decoration: underline;
+}
+
+.sort {
+  display: flex;
+}
+
+.sort-option {
+  margin: 0px 1.5rem 1rem 1.5rem;
+  cursor: pointer;
 }

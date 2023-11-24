@@ -14,7 +14,6 @@ function Article({ article }) {
     const handleBeforeUnload = (event) => {
       const isReloading = event.type === "beforeunload";
       if (isReloading && !isInitialLoad) {
-        console.log("redirect occured");
         navigate("/");
       }
     };
@@ -33,7 +32,11 @@ function Article({ article }) {
     <article className="article">
       <h1 className="title">{article.title}</h1>
       <div className="info-block">
-        <img className="image" src={`${article.urlToImage}`} alt="" />
+        <img
+          className="image"
+          src={`${article.urlToImage}`}
+          alt={`${article.title}`}
+        />
         <div className="author-block">
           <p className="author">{article.author}</p>
           <p className="publishedAt">{article.publishedAt}</p>
