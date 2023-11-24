@@ -1,51 +1,30 @@
 import "./Article.css";
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 function Article({ article }) {
-  const navigate = useNavigate();
-  const [isInitialLoad, setIsInitialLoad] = useState(true);
-
-  // This will force a reload of home page and then immediately route to the blowup page!
-  // The beforeunload event is just before you leave a page
-  useEffect(() => {
-    const handleBeforeUnload = (event) => {
-      const isReloading = event.type === "beforeunload";
-      if (isReloading && !isInitialLoad) {
-        navigate("/");
-      }
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    setIsInitialLoad(false);
-
-    // Cleanup function, prevent a memory link
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, [navigate]);
-
+  // Destructure properties with default values to avoid undefined errors
+  const {
+    title = "",
+    urlToImage = "",
+    author = "",
+    publishedAt = "",
+    source = { name: "" },
+    content = "",
+    url = "",
+  } = article;
   return (
     <article className="article">
-      <h1 className="title">{article.title}</h1>
+      <h1 className="title">{title}</h1>
       <div className="info-block">
-        <img
-          className="image"
-          src={`${article.urlToImage}`}
-          alt={`${article.title}`}
-        />
+        <img className="image" src={`${urlToImage}`} alt={`${title}`} />
         <div className="author-block">
-          <p className="author">{article.author}</p>
-          <p className="publishedAt">{article.publishedAt}</p>
-          <p>{article.source.name}</p>
+          <p className="author">{author}</p>
+          <p className="publishedAt">{publishedAt}</p>
+          <p>{source.name}</p>
         </div>
       </div>
       <div className="content-block">
-        <p className="content">{article.content}</p>
-        <a className="article-link" href={`${article.url}`}>
+        <p className="content">{content}</p>
+        <a className="article-link" href={`${url}`}>
           to read the full article click here
         </a>
       </div>
