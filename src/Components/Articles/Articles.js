@@ -35,21 +35,29 @@ function Articles({ articles }) {
   });
 
   return (
-    <div className="articles-page">
-      <h1 className="app-title">front page</h1>
-      <div className="sort">
-        <p className="sort-option" onClick={() => sortArticles(articles, true)}>
-          sort by earliest
-        </p>
-        <p
-          className="sort-option"
-          onClick={() => sortArticles(articles, false)}
-        >
-          sort by latest
-        </p>
-      </div>
-      <section className="articles-container">{articleCards}</section>
-    </div>
+    <>
+      {articles.length === 0 && <div>Loading...</div>}
+      {articles.length > 0 && (
+        <div className="articles-page">
+          <h1 className="app-title">front page</h1>
+          <div className="sort">
+            <p
+              className="sort-option"
+              onClick={() => sortArticles(articles, true)}
+            >
+              sort by earliest
+            </p>
+            <p
+              className="sort-option"
+              onClick={() => sortArticles(articles, false)}
+            >
+              sort by latest
+            </p>
+          </div>
+          <section className="articles-container">{articleCards}</section>
+        </div>
+      )}
+    </>
   );
 }
 

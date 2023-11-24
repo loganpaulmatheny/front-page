@@ -1,8 +1,8 @@
 import "./App.css";
-// import { getArticles } from "../../apiCalls";
+import { getArticles } from "../../apiCalls";
 
 import { Routes, Route } from "react-router-dom";
-import { mockData } from "../../Data/mockData";
+// import { mockData } from "../../Data/mockData";
 import { useState } from "react";
 import { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -18,20 +18,17 @@ function App() {
   }
 
   function getArticlesCall() {
-    // getArticles().then((data) => {
-    //   setArticles(data.articles);
-    // });
+    getArticles().then((data) => {
+      const updatedData = data.articles.map((article) => {
+        article.id = uuidv4();
+        if (article.content) {
+          article.content = removeTrailingChars(article.content);
+        }
+        return article;
+      });
 
-    const updatedMockData = mockData.articles.map((article) => {
-      article.id = uuidv4();
-      if (article.content) {
-        article.content = removeTrailingChars(article.content);
-      }
-
-      return article;
+      setArticles(updatedData);
     });
-
-    setArticles(updatedMockData);
   }
 
   useEffect(() => {
