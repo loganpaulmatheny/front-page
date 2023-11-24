@@ -31,11 +31,21 @@ function Article({ article }) {
 
   return (
     <article className="article">
-      <h1>{article.title}</h1>
-      <p>{article.author}</p>
-      <p>{article.publishedAt}</p>
-      <p>{article.source.name}</p>
-      <p>{article.content}</p>
+      <h1 className="title">{article.title}</h1>
+      <div className="info-block">
+        <img className="image" src={`${article.urlToImage}`} alt="" />
+        <div className="author-block">
+          <p className="author">{article.author}</p>
+          <p className="publishedAt">{article.publishedAt}</p>
+          <p>{article.source.name}</p>
+        </div>
+      </div>
+      <div className="content-block">
+        <p className="content">{article.content}</p>
+        <a className="article-link" href={`${article.url}`}>
+          to read the full article click here
+        </a>
+      </div>
     </article>
   );
 }

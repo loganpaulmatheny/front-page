@@ -6,8 +6,8 @@ function Card({ title, id, description }) {
   return (
     <NavLink to={`/article/${id}`} className="nav-link">
       <div className="card">
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <h3 className="article-title">{title}</h3>
+        <p className="article-description">{description}</p>
       </div>
     </NavLink>
   );

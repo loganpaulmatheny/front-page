@@ -21,3 +21,11 @@
 .card p {
   line-height: 1.9;
 }
+
+.article-title {
+  font-size: 2rem;
+}
+
+.article-description {
+  font-size: 1.2rem;
+}

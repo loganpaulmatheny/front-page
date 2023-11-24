@@ -1,5 +1,6 @@
 import "./App.css";
 // import { getArticles } from "../../apiCalls";
+
 import { Routes, Route } from "react-router-dom";
 import { mockData } from "../../Data/mockData";
 import { useState } from "react";
@@ -13,6 +14,10 @@ function App() {
   console.log(mockData);
   const [articles, setArticles] = useState([]);
 
+  function removeTrailingChars(property) {
+    return property.replace(/\s*\[\+\d+\s*chars\]\s*$/, "");
+  }
+
   function getArticlesCall() {
     // getArticles().then((data) => {
     //   setArticles(data.articles);
@@ -20,8 +25,14 @@ function App() {
 
     const updatedMockData = mockData.articles.map((article) => {
       article.id = uuidv4();
+      if (article.content) {
+        article.content = removeTrailingChars(article.content);
+        console.log(article.content);
+      }
+
       return article;
     });
+
     setArticles(updatedMockData);
     console.log("getting to the articles call", articles);
   }

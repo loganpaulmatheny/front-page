@@ -1,0 +1,55 @@
+.article {
+  max-width: 800px; /* Adjust as needed */
+  margin: auto; /* Center the article on the page */
+}
+
+.title {
+  font-size: 2em; /* Adjust the title font size as needed */
+  margin-bottom: 5%;
+  margin-top: 10%;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.author-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 12%; /* Adjust the image width as needed */
+  height: 80px; 
+  border-radius: 50%; /* Optional: Round the image */
+  margin-right: 10px;
+}
+
+.author {
+  margin-right: 10px;
+  font-weight: bold; /* Optional: Make the author's name bold */
+}
+
+.publishedAt {
+  color: #555; /* Optional: Use a slightly darker color for the published date */
+}
+
+.content {
+  text-align: left;
+  line-height: 1.6; /* Adjust the line height as needed */
+  font-size: larger;
+}
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-link {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 700;
+}
