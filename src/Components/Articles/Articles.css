@@ -1,6 +1,30 @@
 .articles-container {
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  column-count: 4; /* Set the number of columns */
+  column-gap: 20px; /* Adjust as needed */
+  max-width: 2000px; /* Maximum width for the container */
+  margin: auto; /* Center the container on the page */
+}
+
+.articles-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(249, 244, 235);
+  width: auto;
+}
+
+.app-title {
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+   text-decoration: underline;
+}
+
+.sort {
+  display: flex;
+}
+
+.sort-option {
+  margin: 0px 1.5rem 1rem 1.5rem;
+  cursor: pointer;
 }

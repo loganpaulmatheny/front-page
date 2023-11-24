@@ -1,5 +1,6 @@
 import "./App.css";
 // import { getArticles } from "../../apiCalls";
+
 import { Routes, Route } from "react-router-dom";
 import { mockData } from "../../Data/mockData";
 import { useState } from "react";
@@ -10,8 +11,11 @@ import Home from "../Home/Home";
 import Viewer from "../Viewer/Viewer";
 
 function App() {
-  console.log(mockData);
   const [articles, setArticles] = useState([]);
+
+  function removeTrailingChars(property) {
+    return property.replace(/\s*\[\+\d+\s*chars\]\s*$/, "");
+  }
 
   function getArticlesCall() {
     // getArticles().then((data) => {
@@ -20,10 +24,14 @@ function App() {
 
     const updatedMockData = mockData.articles.map((article) => {
       article.id = uuidv4();
+      if (article.content) {
+        article.content = removeTrailingChars(article.content);
+      }
+
       return article;
     });
+
     setArticles(updatedMockData);
-    console.log("getting to the articles call", articles);
   }
 
   useEffect(() => {

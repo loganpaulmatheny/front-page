@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
+
+* {
+  font-family: 'Noticia Text', serif;
+}
+
 .App {
   text-align: center;
 }

@@ -8,7 +8,6 @@ function View({ articles }) {
       return articleData;
     }
   });
-  console.log("article to view", articleToView[0]);
 
   return <Article article={articleToView[0]} />;
 }
