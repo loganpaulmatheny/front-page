@@ -27,7 +27,8 @@ EXTRA EXTRA, READ ALL ABOUT IT! Front page is a simple web application in which 
 <img width="1470" alt="Screenshot 2023-11-25 at 3 41 49 PM" src="https://user-images.githubusercontent.com/46095125/285615137-8fb31b4a-69a5-484c-853b-5e3e5e3531a4.png">
 
 **Article View**
-<img width="475" alt="Screenshot 2023-11-25 at 3 42 01 PM" src="https://user-images.githubusercontent.com/46095125/285615147-1beb3edf-4699-4782-88c5-f68f286dc4f3.png">
+
+<img width="900" alt="Screenshot 2023-11-25 at 3 42 01 PM" src="https://user-images.githubusercontent.com/46095125/285615147-1beb3edf-4699-4782-88c5-f68f286dc4f3.png">
 
 ## Contributors:
 - [Logan Matheny](https://github.com/loganpaulmatheny)
