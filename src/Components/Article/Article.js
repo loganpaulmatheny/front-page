@@ -19,7 +19,7 @@ function Article({ article }) {
         <div className="author-block">
           <p className="author">{author}</p>
           <p className="publishedAt">{publishedAt}</p>
-          <p>{source.name}</p>
+          <p className="source">{source.name}</p>
         </div>
       </div>
       <div className="content-block">
