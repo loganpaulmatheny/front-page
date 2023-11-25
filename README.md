@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# 📰 front page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  
+##### Built With: 
+<img height="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+<img height="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
+<img height="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
+     
+##### Testing Technologies:
+<img height="100px" src="https://avatars.githubusercontent.com/u/8908513?s=200&v=4"/>
 
-## Available Scripts
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Abstract:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+EXTRA EXTRA, READ ALL ABOUT IT! Front page is a simple web application in which you can see and sort through today's top headlines with a simple interface. Feel free to take a look at the first couple lines of the article or view it in full with front page!
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Preview:
+**Home Page**
+<img width="1470" alt="Screenshot 2023-11-25 at 3 41 49 PM" src="https://user-images.githubusercontent.com/46095125/285615137-8fb31b4a-69a5-484c-853b-5e3e5e3531a4.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Article View**
+<img width="475" alt="Screenshot 2023-11-25 at 3 42 01 PM" src="https://user-images.githubusercontent.com/46095125/285615147-1beb3edf-4699-4782-88c5-f68f286dc4f3.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributors:
+- [Logan Matheny](https://github.com/loganpaulmatheny)
 
-### `npm run eject`
+## Context:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This was an individual project during Mod 3 at Turing School of Software & Design using the [provided comp](https://mod4.turing.edu/projects/take_home/take_home_fe).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Learning Goals:
+- Complete a basic React in a efficient manner
+- Gain competency with React fundamentals
+- Test React components & asynchronous JS E2E using Cypress
+- Create a multi-page UX using Router
+- Learn to deploy an application (with environmental variables)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Challenges:
+- User  Experience: This application utilizes a News API. The GET request occurs on the home page and data is passed down in the form of props. This means that if an individual reloads a page requiring that data to render an error will be thrown. I had to create a better user experience for this type of issue under time constraints. Thus if a user reloads the page when viewing an article they will automatically be routed back to the home page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation Instructions:
 
-## Learn More
+1. Fork this repository.
+2. Clone it to your local machine using the green `<> CODE` button and paste that into your terminal with the command: `git clone <paste here>`
+3. Run the command: `cd front-page`
+4. Run the command: `npm install`
+5. Run the command: `npm start`
+6. The application will open in your browser
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Ideas for future iterations 
+- Improve the search, sort, and filter functionality taking advantage of news outlets in other countries or networks
+- Continue to improve the UI
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
