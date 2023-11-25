@@ -1,4 +1,5 @@
 import "./Article.css";
+import { NavLink } from "react-router-dom";
 
 function Article({ article }) {
   // Destructure properties with default values to avoid undefined errors
@@ -27,6 +28,9 @@ function Article({ article }) {
         <a className="article-link" href={`${url}`}>
           to read the full article click here
         </a>
+        <NavLink to={`/`}>
+          <button className="home-link">Or Go Home</button>
+        </NavLink>
       </div>
     </article>
   );

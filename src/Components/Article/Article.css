@@ -47,10 +47,47 @@
 .content-block {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .article-link {
   text-align: center;
   margin-top: 30px;
   font-weight: 700;
+}
+
+.home-link {
+  border: 0px;
+  margin-top: 3rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .author-block {
+    align-items: center;
+  }
+
+  .image {
+    width: 100px;
+    height: 80px; 
+    border-radius: 50%; /* Optional: Round the image */
+    margin-right: 0px;
+  }
 }
