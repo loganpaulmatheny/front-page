@@ -12,7 +12,7 @@ describe("Testing the initial load of the page", () => {
     ).as("getRequest");
   });
 
-  it("Should display the correct things on load", () => {
+  it("Should display the correct things on load and allow app navigation", () => {
     cy.visit("http://localhost:3000")
       .wait("@getRequest")
       .get(".card")
@@ -55,6 +55,10 @@ describe("Testing the initial load of the page", () => {
       .and(
         "include",
         `https://apnews.com/article/israel-hamas-war-news-11-24-2023-172256dd593189f7b37f7c62f4739c6b`
-      );
+      )
+      .get(".home-link")
+      .click()
+      .get(".app-title")
+      .should("contain", "front page");
   });
 });
