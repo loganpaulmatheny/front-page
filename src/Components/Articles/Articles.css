@@ -7,6 +7,8 @@
 }
 
 .articles-page {
+  box-sizing: border-box;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +19,7 @@
 .app-title {
   margin-top: 7rem;
   margin-bottom: 2rem;
-   text-decoration: underline;
+  text-decoration: underline;
 }
 
 .sort {
@@ -27,4 +29,10 @@
 .sort-option {
   margin: 0px 1.5rem 1rem 1.5rem;
   cursor: pointer;
+}
+
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
